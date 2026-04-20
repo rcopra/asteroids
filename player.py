@@ -29,14 +29,14 @@ class Player(CircleShape):
     def update(self, dt):
         keys = pygame.key.get_pressed()
 
-        if keys[pygame.K_r]:
+        if keys[pygame.K_a]:
             self.rotate(-dt) 
-        if keys[pygame.K_t]:
+        if keys[pygame.K_d]:
             self.rotate(dt) 
-        if keys[pygame.K_f]:
+        if keys[pygame.K_w]:
             self.move(dt) 
         if keys[pygame.K_s]:
-            self.move(dt) 
+            self.move(-dt) 
 
     def move(self, dt):
         unit_vector = pygame.Vector2(0, 1)
